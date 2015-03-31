@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Pingpong : A demo Wi-FI Direct app to &quot;pingpong&quot; between to group and to transfer files.">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Pingpong</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/Ks89/PingPong">View on GitHub</a>
+
+          <h1 id="project_title">Pingpong</h1>
+          <h2 id="project_tagline">A demo Wi-FI Direct app to &quot;pingpong&quot; between to group and to transfer files.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/Ks89/PingPong/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/Ks89/PingPong/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="pingpong" class="anchor" href="#pingpong" aria-hidden="true"><span class="octicon octicon-link"></span></a>PingPong</h1>
+
+<p><img src="http://www.stefanocappa.it/publicfiles/Github_repositories_images/PingPong/pingpong_header_github.png" alt="alt tag"></p>
+
+<h2>
+<a id="informations" class="anchor" href="#informations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Informations</h2>
+
+<p>Wi-Fi Direct PingPong (aka PingPong) is a demo Android's application that try to overcome some Wi-Fi Direct's limitations.
+At the moment, the wifi diver of commercial devices doesn't allow a device to partecipate concurrently in two Wi-Fi Direct's groups. This app tries to overcome these limitations. The main goal is the possibility for a client to "jump" continuously between two different groups, like a ball in the game called ping pong.
+It's possible to achieve this with synchronized connections and disconnections between GOs and the "PingPong client".</p>
+
+<p>PingPong requires Android 4.4 KitKat (API 19) or higher. This choice is related to to the fact that in previous versions, this protocol was unstable and unreliable.</p>
+
+<p>It's important to remember that this is a demo application, so features like the management of screen's rotation, standby device, wifi not available and so on, are not managed as a commercial product.</p>
+
+<h2>
+<a id="results" class="anchor" href="#results" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results</h2>
+
+<p><a href="https://www.youtube.com/watch?v=qsFmHGitniw">VIDEO YOUTUBE</a></p>
+
+<p>As you can see, PingPong works with poor performances.<br>
+The main problems are the "Discovery Phase" of this protocol and the Wi-Fi Direct's implementation in Android, in fact:<br>
+1. The discovery time is too high when the number of devices increases <br>
+2. After a certain time, a device is no longer discoverable from others, so you need to restart the Discovery Phase on all devices <br>
+3. Sometimes, especially in KitKat, the WiFi part of Android crashes and the only way to solve this annoying problem is a complete reboot of the device (this situation is recognizable when Android can't find other network in Wi-Fi Setting's app).</p>
+
+<p>This shows that in some applications, in particular when you need to transfer files or real time applications, the Discovery Phase in Wi-Fi Direct is a very big problem.</p>
+
+<h2>
+<a id="news" class="anchor" href="#news" aria-hidden="true"><span class="octicon octicon-link"></span></a>News</h2>
+
+<ul>
+<li>
+<em>03/13/2015</em> - <strong>PingPong alpha 3</strong> with better log with timestamps</li>
+<li>
+<em>03/04/2015</em> - <strong>PingPong alpha 2</strong> with autonomous group owner, released</li>
+<li>
+<em>03/02/2015</em> - <strong>PingPong alpha</strong> public release</li>
+</ul>
+
+<h2>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h2>
+
+<p>You can:<br>
+1. <strong>change the device name</strong> with Java Reflection <br>
+2. show a list of nearby devices <br>
+3. manage connection and disconnection between devices <br>
+4. connect more than one client to the same GO <br>
+5. show GO's information on all clients connected to him <br>
+6. show the list of Clients and some other data on every GO <br>
+7. <strong>send video files in the gallery</strong> from clients to their GO's <br>
+8. <strong>transform a client into a "PingPong Device"</strong> choosing the "starting GO" called Ping Device and the "destination GO" called Pong Device. The PingpPong Device connects and disconnects to the Ping Device and Pong Device alternately, i.e. "jumps" ;) <br>
+9. use the <strong>Ping Pong mode</strong> a resized version of the "Eternal Discovery" in "Pigeon Messenger" that tries to synchronize the devices <br></p>
+
+<h2>
+<a id="images" class="anchor" href="#images" aria-hidden="true"><span class="octicon octicon-link"></span></a>Images</h2>
+
+<p><br>
+<img src="http://www.stefanocappa.it/publicfiles/Github_repositories_images/PingPong/discovered-connecting-connected.png" alt="alt tag">
+<br>
+<img src="http://www.stefanocappa.it/publicfiles/Github_repositories_images/PingPong/round_button_completo.png" alt="alt tag">
+     
+<img src="http://www.stefanocappa.it/publicfiles/Github_repositories_images/PingPong/toolbar_icon.png" alt="alt tag">
+     
+<img src="http://www.stefanocappa.it/publicfiles/Github_repositories_images/PingPong/change_device_name.png" alt="alt tag">
+<br></p>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<h3>
+<a id="general-usage" class="anchor" href="#general-usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>General usage</h3>
+
+<ol>
+<li>Activate Wi-Fi on all devices</li>
+<li>Open this app on all devices</li>
+<li>Touch the "cardview" under the words "This Device" to choose the device name</li>
+<li>Wait until devices are discovered</li>
+<li>Connect your device to another one touching an element in the list under the words "Other Devices"</li>
+<li>On the Client touch the first button (gallery button) to send a video from your gallery (please wait some seconds, i didn't implement a progress bar :))</li>
+<li>Disconnect from GO (obviously all clients will be disconnected) or from Client (only this client will be disconnected) touching the second button (disconnect button)</li>
+</ol>
+
+<h3>
+<a id="group-with-multiple-peers-usage" class="anchor" href="#group-with-multiple-peers-usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Group with multiple peers usage</h3>
+
+<ol>
+<li>Activate Wi-Fi on all devices</li>
+<li>Open this app on all devices</li>
+<li>Touch the "cardview" under the words "This Device" to choose the device name</li>
+<li>Wait until devices are discovered</li>
+<li>Connect your device to another one touching an element in the list under the words "Other Devices"</li>
+<li>On every device, touch the second toolbar's icon to restart the Discovery Phase</li>
+<li>Connect other Clients choosing always the same GO. In this way on the GO you will see his Client's list.</li>
+</ol>
+
+<h3>
+<a id="pingpong-usage" class="anchor" href="#pingpong-usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>PingPong usage</h3>
+
+<ol>
+<li>Activate Wi-Fi on all devices</li>
+<li>Open this app on all devices</li>
+<li>Touch the "cardview" under the words "This Device" to choose the device name</li>
+<li>Wait until devices are discovered</li>
+<li>Connect your device to another one touching an element in the list under the words "Other Devices"</li>
+<li>After the group's creation, choose one of them as "PingPong Device" and in every other devices touch the first toolbar's icon to activate the pingpong mode. This in extremely similar to the "Eternal Discovery" in Pigeon Messenger, but here the performances are lower due to synchronization's problems and the only way to achieve this is with this trick that i called "PingPong mode"</li>
+<li>On the Client touch the third button (ping pong button) to open a dialog and choose the destination GO (the GO of the groups where the device want to be a Client during "pingponging")</li>
+<li>Confirm to start "PingPong"</li>
+</ol>
+
+<h2>
+<a id="interesting-things" class="anchor" href="#interesting-things" aria-hidden="true"><span class="octicon octicon-link"></span></a>Interesting things</h2>
+
+<p>This app contains an abstraction of Android's p2p object, that i called: P2PDevice, P2PGroup and P2PGroups to make it easily maintainable and easy to extend. For example you can obtain easily the IP Address associated to the GO in a P2PGroup.
+I created the logic to obtain IP Addresses in Pigeon Messenger extending these classes.</p>
+
+<p>Moreover, there are some lists that use Singleton's pattern:</p>
+
+<ul>
+<li>the Client list of a GO</li>
+<li>the discovered devices</li>
+<li>the device list used by Ping Pong functionality</li>
+</ul>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>Copyright 2015 Politecnico di Milano</p>
+
+<p>Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at</p>
+
+<pre><code>http://www.apache.org/licenses/LICENSE-2.0
+</code></pre>
+
+<p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.</p>
+
+<p><br>
+<strong>Created by Stefano Cappa</strong></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Pingpong maintained by <a href="https://github.com/Ks89">Ks89</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-18023375-2");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+
+  </body>
+</html>
